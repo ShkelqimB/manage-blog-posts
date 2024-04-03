@@ -40,7 +40,7 @@ export class BlogPostsService {
       for (const res of results) {
         const key = `${cacheKey}:${res.id}`;
         // Cache the results
-        await this.redisService.set(key, JSON.stringify(res)); // Cache for 5 minutes
+        await this.redisService.set(key, JSON.stringify(res));
       }
       return results;
     }
